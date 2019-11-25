@@ -137,5 +137,14 @@ After some work and modification of the given code, I achieved a working algorit
 	\includegraphics[scale=0.15]{7}
 \end{center}
 
-pour 
+4. If an unknown person it in front of the camera, he'll be tagged as the "physically closest person", i.e. the person in the database that look the more like him.
+
+In order to fixe this issue, I added a condition, before drawing the rectangle with the name of the detected person, claiming that if the maximum probability of this person belonging to a registered profile is less than 0.8, the person is said unknown.
+
+I deleted my face from the database to get this:
+\begin{center}
+	\includegraphics[scale=0.15]{8}
+\end{center}
+
+
 \end{document}

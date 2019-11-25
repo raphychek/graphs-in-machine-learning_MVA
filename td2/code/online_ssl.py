@@ -232,7 +232,7 @@ def online_face_recognition(profile_names, n_pictures=15):
             Change False by something else to be able to disregard faces it cannot recognize (question 3.4)
             """
             print(p1)
-            if np.abs(f[0]) < 0.8:
+            if np.max(np.abs(f)) < 0.8:
                 color = (100, 100, 100)
                 txt = "unknown"
                 cv.putText(img, txt, (p1[0], p1[1] - 5), cv.FONT_HERSHEY_COMPLEX_SMALL, 1, color)
